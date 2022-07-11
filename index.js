@@ -10,7 +10,11 @@ import { getElement } from './src/utils.js';
 
 const init = async () =>{
     const products=await fetchProducts();
-    console.log(products)
+   if(products){
+    setupStore(products);
+    const featured=store.filter((product)=> product.featured === true)
+    console.log(featured)
+   }
 }
 
 window.addEventListener('DOMContentLoaded',init)
