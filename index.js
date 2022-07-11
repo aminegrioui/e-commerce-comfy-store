@@ -13,7 +13,7 @@ const init = async () =>{
    if(products){
     setupStore(products);
     const featured=store.filter((product)=> product.featured === true)
-   display(featured,getElement('.featured-center'))
+    display(featured,getElement('.featured-center'))
    }
 }
 

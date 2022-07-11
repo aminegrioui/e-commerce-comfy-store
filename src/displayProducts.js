@@ -1,8 +1,6 @@
 import { formatPrice } from './utils.js';
 import { addToCart } from './cart/setupCart.js';
 const display = (products,element) => {
-    console.log(products, element)
-
      element.innerHTML=products.map((product)=>{
         const {id, name,image,price}=product;
         return `
@@ -28,7 +26,10 @@ const display = (products,element) => {
      }).join('')
 
      element.addEventListener('click', (e)=>{
-        const parent=e.target;
+        const parent=e.target.parentElement;
+        if(parent.classList.contains('product-cart-btn')){
+            addToCart(parent.dataset.id);
+        }
      })
 };
 
