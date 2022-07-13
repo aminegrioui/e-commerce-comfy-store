@@ -14,11 +14,12 @@ import { store } from '../store.js';
 import display from '../displayProducts.js';
 import { getElement } from '../utils.js';
 
-const laoding=getElement('.page-loading')
+const loading=getElement('.page-loading')
 
 display(store, getElement('.products-container'))
 setupSearch(store)
 setupCompanies(store)
+setupPrice(store)
 
-laoding.style.display='none'
+loading.style.display='none'
 
