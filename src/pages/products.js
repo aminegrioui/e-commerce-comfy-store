@@ -10,12 +10,14 @@ import setupCompanies from '../filters/companies.js';
 import setupPrice from '../filters/price.js';
 
 // specific imports
-import { store } from '../store.js';
+import { setupStore, store } from '../store.js';
 import display from '../displayProducts.js';
-import { getElement } from '../utils.js';
+import { allProductsUrl, getElement } from '../utils.js';
+// import fetchProducts from '../fetchProducts.js';
 
 const loading=getElement('.page-loading')
 
+// setupStore(await fetchProducts())
 display(store, getElement('.products-container'))
 setupSearch(store)
 setupCompanies(store)

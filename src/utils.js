@@ -25,7 +25,7 @@ const formatPrice = (price) => {
 
 const getStorageItem = (item) => {
   let storageItem=localStorage.getItem(item);
-  if(setStorageItem){
+  if(storageItem){
     storageItem=JSON.parse(localStorage.getItem(item));
   } 
   else{
@@ -45,3 +45,26 @@ export {
   getStorageItem,
   setStorageItem,
 }
+
+
+// <!-- single item -->
+// <article class="cart-item">
+//   <img src="./images/main-bcg.jpeg" class="cart-item-img" alt="">
+// <!-- item info -->
+//   <div>
+//       <h4 class="cart-item-name">high-back bench</h4>
+//     <p class="cart-item-price">$13.99</p>
+//     <button class="cart-item-remove-btn">remove</button>
+//     </div>
+// <!-- amount toggle-->
+
+// <div>
+//      <button class="cart-item-increase-btn">
+//       <i class="fas fa-chevron-up" ></i>
+//      </button>
+//      <p class="cart-item-amount">1</p>
+//      <button class="cart-item-decrease-btn">
+//       <i class="fas fa-chevron-down" ></i>
+//      </button>
+// </div>
+// </article>

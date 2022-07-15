@@ -24,49 +24,7 @@ const pageTitleDOM = getElement('.page-hero-title');
  let productID;
 
 // productID=productID.substring(4)
-const section=getElement('.section-center')
 
-
-const fetchProduct = async ()=>{
-    const response=await fetch(singleProductUrl+productID)
-    return response.json()
-}
-
-// const init =  async ()=>{
-//     console.log(productID)
-//     const product= await fetchProduct();
-//     const {id,fields}=product;
-//     const {name,colors,image,description,price}=fields;
-//     const {thumbnails}=image[0];
-//     const {img}=thumbnails.large.url
-//     // console.log(product)
-//     console.log(thumbnails.large.url)
-//      section.innerHTML= `
-       
-//      <img src="${thumbnails.large.url}"
-//      alt="">
-
-//      <article class="single-product-info">
-//       <div>
-//         <h2 class="single-product-title">${name}</h2>
-//         <p class="single-product-company text-slanted"> ${name}</p>
-//         <p class="single-product-price"> $ ${price}</p>
-//         <div class="single-product-colors">
-
-//         $
-//         </div>
-//         <p class="single-product-desc">
-//            ${description}
-//         </p>
-//         <button class="addToCartBtn btn" data-id="id">
-
-//           add to cart
-//         </button>
-//       </div>
-//      </article>
-//      `
-// }
-// init()
 window.addEventListener('DOMContentLoaded', async ()=>{
     const urlId= window.location.search;
      console.log(urlId)

@@ -11,5 +11,7 @@ const setupStore = (products) => {
 
 };
 
-const findProduct = () => {};
+const findProduct = (id) => {
+    return store.find(product=> product.id=== id);
+};
 export { store, setupStore, findProduct };

@@ -4,7 +4,6 @@ import display from '../displayProducts.js';
 const form=getElement('.input-form')
 const input=getElement('.search-input')
 
-console.log(input.value)
 const setupSearch = (store) => {
     form.addEventListener('keyup',(e)=>{
         const value=input.value
