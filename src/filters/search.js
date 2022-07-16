@@ -12,7 +12,7 @@ const setupSearch = (store) => {
         if(value){
              const newStore=store.filter(product=> product.name.includes(value));
             if(newStore.length>0){
-                display(newStore,element)
+                display(newStore,element,true)
             }
             else{
                 element.innerHTML=`<h3 class="filter-error">

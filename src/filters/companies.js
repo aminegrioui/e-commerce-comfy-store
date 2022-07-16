@@ -32,7 +32,7 @@ const setupCompanies = (store) => {
             newStore=[... store]
             
         }
-        display(newStore,getElement('.products-container'))
+        display(newStore,getElement('.products-container'),true)
         
        
        })

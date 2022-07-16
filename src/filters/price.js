@@ -19,7 +19,7 @@ const setupPrice = (store) => {
         const price= parseInt(inputFilter.value)
         const newStore=store.filter((product)=> (product.price/100)<=price)
         // console.log(newStore)
-      display(newStore, getElement('.products-container'))
+      display(newStore, getElement('.products-container'),true)
       if(newStore.length< 1){
         getElement('.products-container').innerHTML=`<h3 class="filter-error">
               sorry, no produst matched your search !!
